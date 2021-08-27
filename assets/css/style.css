@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(40deg, #5a84bb 30%, #3f0707 50%, orange 70%);
+  font-family: "Press Start 2P", cursive;
+}
+
+main {
+  width: 30vw;
+  margin: 5vh auto;
+  padding: 50px 20px;
+  background-image: linear-gradient(40deg, #fff 10%, #000 80%);
+  border-radius: 15px;
+}
+main article:first-of-type {
+  border: 3px solid #fff;
+  border-radius: 15px;
+  padding: 10px 0;
+}
+main article:first-of-type h3 {
+  text-align: center;
+  color: orange;
+  margin-bottom: 4vh;
+}
+main article:first-of-type form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 20px;
+  justify-items: center;
+  color: orange;
+}
+main article:nth-child(2) {
+  border: 3px solid #fff;
+  border-radius: 15px;
+  margin: 5vh 0;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+main article:nth-child(2) h2 {
+  font-size: 26px;
+}
+main article:nth-child(2) h6 {
+  background-color: #e73617;
+  position: absolute;
+  top: 2vh;
+  padding: 10px;
+}
+main article:nth-child(2) #user-board {
+  left: -1.5vw;
+}
+main article:nth-child(2) #comp-board {
+  right: -1.5vw;
+}
+main #res {
+  color: #15dd79;
+  text-align: center;
+  font-size: 18px;
+}
+main article:nth-child(4) {
+  margin: 3vh 0;
+}
+main article:nth-child(4) form {
+  display: flex;
+  justify-content: space-around;
+}
+main article:nth-child(4) form input {
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  border: 10px double #fff;
+  background-color: orange;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main article:nth-child(4) form input:hover {
+  background-color: gray;
+}
+main article:nth-child(4) form input:nth-child(1) {
+  background-image: url(../img/rock.jpg);
+  background-position: 0 -10px;
+}
+main article:nth-child(4) form input:nth-child(2) {
+  background-image: url(../img/paper.png);
+}
+main article:nth-child(4) form input:nth-child(3) {
+  background-image: url(../img/sess.png);
+}
+main article:nth-child(4) h4 {
+  margin-top: 3vh;
+  text-align: center;
+}
+
+a {
+  margin-left: 11vw;
+  color: #cd3232;
+  font-size: 12px;
+}
+
+a:hover {
+  color: #07a807;
+}
+
+/*# sourceMappingURL=style.css.map */

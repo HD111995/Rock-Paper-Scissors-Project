@@ -1,0 +1,127 @@
+//Importing
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+//Normalize
+* {
+  margin: 0;
+  padding: 0;
+}
+//body Styling
+body {
+  background-image: linear-gradient(
+    40deg,
+    rgb(90, 132, 187) 30%,
+    rgb(63, 7, 7) 50%,
+    orange 70%
+  );
+  font-family: "Press Start 2P", cursive;
+}
+//main Styling
+main {
+  width: 30vw;
+  margin: 5vh auto;
+  padding: 50px 20px;
+  background-image: linear-gradient(40deg, #fff 10%, #000 80%);
+  border-radius: 15px;
+  //first article round number
+  article:first-of-type {
+    border: 3px solid #fff;
+    border-radius: 15px;
+    padding: 10px 0;
+    //heading
+    h3 {
+      text-align: center;
+      color: orange;
+      margin-bottom: 4vh;
+    }
+    //form container of inputs
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 20px;
+      justify-items: center;
+      color: orange;
+    }
+  }
+  //second article round winer/loser counter
+  article:nth-child(2) {
+    border: 3px solid #fff;
+    border-radius: 15px;
+    margin: 5vh 0;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    //counter result as heading
+    h2 {
+      font-size: 26px;
+    }
+    //user/computer board
+    h6 {
+      background-color: rgb(231, 54, 23);
+      position: absolute;
+      top: 2vh;
+      padding: 10px;
+    }
+    #user-board {
+      left: -1.5vw;
+    }
+    #comp-board {
+      right: -1.5vw;
+    }
+  }
+  //final result container
+  #res {
+    color: rgb(21, 221, 121);
+    text-align: center;
+    font-size: 18px;
+  }
+  //last article option sector
+  article:nth-child(4) {
+    margin: 3vh 0;
+    //form user option as input container
+    form {
+      display: flex;
+      justify-content: space-around;
+      //input type of button Styling Global
+      input {
+        width: 7vw;
+        height: 7vw;
+        border-radius: 50%;
+        border: 10px double #fff;
+        background-color: orange;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      //input Extra Styling start here
+      input:hover {
+        background-color: gray;
+      }
+      input:nth-child(1) {
+        background-image: url(../img/rock.jpg);
+        background-position: 0 -10px;
+      }
+      input:nth-child(2) {
+        background-image: url(../img/paper.png);
+      }
+      input:nth-child(3) {
+        background-image: url(../img/sess.png);
+      }
+      //End here
+    }
+    //make your move feld  as Heading4 Styling
+    h4 {
+      margin-top: 3vh;
+      text-align: center;
+    }
+  }
+}
+//Anchor Tag to restart the Game Styling
+a {
+  margin-left: 11vw;
+  color: rgb(205, 50, 50);
+  font-size: 12px;
+}
+a:hover {
+  color: rgb(7, 168, 7);
+}

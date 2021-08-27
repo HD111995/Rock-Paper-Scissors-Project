@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main>
+        <!-- first sector pick round number -->
+        <article class="first">
+            <h3>How many Rounds ?</h3>
+            <form action="" onchange="checkme()" id="round">
+            <div>
+                <input type="radio" name="round" id="five" >
+                <label for="five">05</label>
+            </div>
+            <div>
+                <input type="radio" name="round" id="ten" >
+                <label for="ten">10</label>
+            </div>
+            <div>
+                <input type="radio" name="round" id="fifteen" >
+                <label for="fifteen">15</label>
+            </div>
+            <div>
+                <input type="radio" name="round" id="twenty" >
+                <label for="twenty">20</label>
+            </div>
+        </form>
+        </article>
+        <!-- ************************************************************* -->
+        <!-- second sector view round winer/loser counter + boards -->
+        <article>
+            <h2><span id="user-point">0</span>:<span id="comp-point">0</span></h2>
+            <h6 id="user-board">User</h6>
+            <h6 id="comp-board">Comp</h6>
+        </article>
+        <!-- ************************************************************** -->
+        <!-- div container to view final result -->
+        <div id="res">
+            Let's Play
+        </div>
+        <!-- ************************************************************** -->
+        <!-- last sector make your choise -->
+        <article>
+            <form action="" >
+                <input type="button" value="" id="r" onclick="rock()">
+                <input type="button" value="" id="p" onclick="paper()">
+                <input type="button" value="" id="s" onclick="sess()">
+            </form>
+            <h4>MAKE YOUR MOVE.</h4>
+        </article>
+        <!-- ****************************** -->
+        <!-- Anchor restart the Game -->
+        <a href="">restart</a>
+    </main>
+<script src="assets/js/main.js"></script>    
+</body>
+</html>
