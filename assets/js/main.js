@@ -42,6 +42,9 @@ switch (true) {
         break ;    
 }
 }
+
+//start the Game Functions
+//Rock chiose
 function rock(){
     let compMove = Math.floor(Math.random()*(3-1+1))+1;
     if (round == 0){
@@ -84,6 +87,7 @@ function rock(){
 }
     
 }
+//Paper Choise
 function paper(){
     let compMove = Math.floor(Math.random()*(3-1+1))+1;
     if (round == 0){
@@ -126,6 +130,7 @@ function paper(){
 }
     
 }
+//Scissors choise
 function sess(){
     let compMove = Math.floor(Math.random()*(3-1+1))+1;
     if (round == 0){
