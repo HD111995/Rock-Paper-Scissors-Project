@@ -17,7 +17,9 @@ function write(id,doc){
 let five,ten,fifteen,tweny;
 let round = 0;
 let userInput = 0;
-let i = 0 ;
+let userFinalResult = 0;
+let compFinalResult = 0;
+let counter = 0 ;
 //calling checkme function  Action onchange 
 function checkme(){
     five = check("five");
@@ -41,18 +43,128 @@ switch (true) {
 }
 }
 function rock(){
-    userInput = 1;
-    i = i+1;
     let compMove = Math.floor(Math.random()*(3-1+1))+1;
+    if (round == 0){
+        window.alert("Please chose  Round Number")
+    }else{
+        counter = counter+1;
+    if (counter > round ){
+        window.alert("The Game is Over Please Press restart to play again")
+    }else{
+        
+        write("round",counter+"/"+round)
     if (compMove == 1){
         write("res","Its a Draw you both chose Rock" )
         get("r").style.backgroundColor = "#fff" 
+        write("user-point",userFinalResult);
+        write("comp-point",compFinalResult)
     }else if (compMove == 2){
         write("res","Paper beats Rock .<br><br>You lose!!" ) 
-        get("r").style.backgroundColor = "red" 
+        get("r").style.backgroundColor = "red"
+        compFinalResult += 1;
+        write("user-point",userFinalResult);
+        write("comp-point",compFinalResult) 
     }else if (compMove == 3){
         write("res","Rock beats Scissors .<br><br>You Win!!") 
-        get("r").style.backgroundColor = "yellowgreen"  
+        get("r").style.backgroundColor = "yellowgreen" 
+        userFinalResult +=1;
+        write("user-point",userFinalResult);
+        write("comp-point",compFinalResult) 
     }
-    console.log(compMove);
+    if (round == counter){
+        if(userFinalResult < compFinalResult){
+            write("res","Game Over! The Computer Win" ); 
+        }else if (compFinalResult < userFinalResult){
+            write("res","Congratulation! you Win" );
+    }else if (computerFinalResult == userFinalResult){
+            write("res","Wow! It's a Draw" );
+    }
+    }
+}
+}
+    
+}
+function paper(){
+    let compMove = Math.floor(Math.random()*(3-1+1))+1;
+    if (round == 0){
+        window.alert("Please chose  Round Number")
+    }else{
+        counter = counter+1;
+    if (counter > round ){
+        window.alert("The Game is Over Please Press restart to play again")
+    }else{
+        
+        write("round",counter+"/"+round)
+    if (compMove == 2){
+        write("res","Its a Draw you both chose Paper" )
+        get("p").style.backgroundColor = "#fff" 
+        write("user-point",userFinalResult);
+        write("comp-point",compFinalResult)
+    }else if (compMove == 3){
+        write("res"," Scissors  beats Paper .<br><br>You lose!!" ) 
+        get("p").style.backgroundColor = "red"
+        compFinalResult += 1;
+        write("user-point",userFinalResult);
+        write("comp-point",compFinalResult) 
+    }else if (compMove == 1){
+        write("res","Paper beats Rock .<br><br>You Win!!") 
+        get("p").style.backgroundColor = "yellowgreen" 
+        userFinalResult +=1;
+        write("user-point",userFinalResult);
+        write("comp-point",compFinalResult) 
+    }
+    if (round == counter){
+        if(userFinalResult < compFinalResult){
+            write("res","Game Over! The Computer Win" ); 
+        }else if (compFinalResult < userFinalResult){
+            write("res","Congratulation! you Win" );
+    }else if (computerFinalResult == userFinalResult){
+            write("res","Wow! It's a Draw" );
+    }
+    }
+}
+}
+    
+}
+function sess(){
+    let compMove = Math.floor(Math.random()*(3-1+1))+1;
+    if (round == 0){
+        window.alert("Please chose  Round Number")
+    }else{
+        counter = counter+1;
+    if (counter > round ){
+        window.alert("The Game is Over Please Press restart to play again")
+    }else{
+        
+        write("round",counter+"/"+round)
+    if (compMove == 3){
+        write("res","Its a Draw you both chose Scissors" )
+        get("s").style.backgroundColor = "#fff" 
+        write("user-point",userFinalResult);
+        write("comp-point",compFinalResult)
+    }else if (compMove == 1){
+        write("res"," Rock  beats Scissors .<br><br>You lose!!" ) 
+        get("s").style.backgroundColor = "red"
+        compFinalResult += 1;
+        write("user-point",userFinalResult);
+        write("comp-point",compFinalResult) 
+    }else if (compMove == 2){
+        write("res","Scissors beats Paper .<br><br>You Win!!") 
+        get("s").style.backgroundColor = "yellowgreen" 
+        userFinalResult +=1;
+        write("user-point",userFinalResult);
+        write("comp-point",compFinalResult) 
+    }
+    if (round == counter){
+        if(userFinalResult < compFinalResult){
+            write("res","Game Over! The Computer Win" ); 
+        }else if (compFinalResult < userFinalResult){
+            write("res","Congratulation! you Win" );
+    }else if (computerFinalResult == userFinalResult){
+            write("res","Wow! It's a Draw" );
+    }
+    }
+}
+}
+    
 }

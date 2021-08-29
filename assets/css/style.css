@@ -5,7 +5,12 @@
 }
 
 body {
-  background-image: linear-gradient(40deg, #5a84bb 30%, #3f0707 50%, orange 70%);
+  background-image: linear-gradient(
+    40deg,
+    #5a84bb 30%,
+    #3f0707 50%,
+    orange 70%
+  );
   font-family: "Press Start 2P", cursive;
 }
 
@@ -15,6 +20,7 @@ main {
   padding: 50px 20px;
   background-image: linear-gradient(40deg, #fff 10%, #000 80%);
   border-radius: 15px;
+  box-shadow: 5px 5px 30px 10px blue;
 }
 main article:first-of-type {
   border: 3px solid #fff;
